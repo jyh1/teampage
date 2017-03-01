@@ -21,8 +21,7 @@ configYaml = [r|
 faculties:
   - familyName: wang
     lastName: newb
-    titles:
-      - Principle
+    titles: [Principles, Investigator]
     descriptions:
       - |
           haha
@@ -73,7 +72,7 @@ data People =
   , url :: Maybe Text
   , descriptions :: [Text]
   , email :: Text
-  , photo :: Text
+  , photo :: Maybe Text
   } deriving (Eq, Show, Generic)
 
 instance FromJSON People
