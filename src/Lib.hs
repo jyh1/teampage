@@ -14,50 +14,56 @@ import Data.ByteString (ByteString)
 import Control.Applicative
 import Prelude -- Ensure Applicative is in scope and we have no warnings, before/after AMP.
 import GHC.Generics
+import Data.HashMap.Strict
 
 configYaml :: ByteString
 configYaml = [r|
-resolver: lts-3.7
-packages:
-  - ./yesod-core
-  - ./yesod-static
-  - ./yesod-persistent
-  - ./yesod-newsfeed
-  - ./yesod-form
-  - ./yesod-auth
-  - ./yesod-auth-oauth
-  - ./yesod-sitemap
-  - ./yesod-test
-  - ./yesod-bin
-  - ./yesod
-  - ./yesod-eventsource
-  - ./yesod-websockets
-# Needed for LTS 2
-extra-deps:
-- wai-app-static-3.1.4.1
-test:
-  familyName: wang
-  lastName: newb
-  titles:
-    - Principle
-  descriptions:
-    - |
-        haha
-        heheh
-        yes
-        new: sldkfj
-    - "Job Description: Daily Management"
-  email: "wang@newbie.com"
-  photo: "www.baidu.com"
+faculties:
+  - familyName: wang
+    lastName: newb
+    titles:
+      - Principle
+    descriptions:
+      - |
+          haha
+          heheh
+          yes
+          new: sldkfj
+      - "Job Description: Daily Management"
+    email: "wang@newbie.com"
+    photo: "www.baidu.com"
+
+  - familyName: wang
+    lastName: newb
+    titles:
+      - Principle
+    descriptions:
+      - |
+          haha
+          heheh
+          yes
+          new: sldkfj
+      - "Job Description: Daily Management"
+    email: "wang@newbie.com"
+    photo: "www.baidu.com"
+
+staff:
+  - familyName: wang
+    lastName: newb
+    titles:
+      - Principle
+    descriptions:
+      - |
+          haha
+          heheh
+          yes
+          new: sldkfj
+      - "Job Description: Daily Management"
+    email: "wang@newbie.com"
+    photo: "www.baidu.com"
+
 |]
 
-data Config =
-  Config {
-    resolver  :: Text
-  , packages  :: [FilePath]
-  , extraDeps :: [Text]
-  , test :: People
-  } deriving (Eq, Show)
 
 data People =
   People {
@@ -72,16 +78,15 @@ data People =
 
 instance FromJSON People
 
+data PageInfo = PageInfo (HashMap Text [People])
+  deriving (Eq, Show)
 
-instance FromJSON Config where
+instance FromJSON PageInfo where
   parseJSON (Y.Object v) =
-    Config <$>
-    v .:   "resolver"       <*>
-    v .:   "packages" <*>
-    v .:   "extra-deps" <*>
-    v .: "test"
-  parseJSON _ = fail "Expected Object for Config value"
+    PageInfo <$>
+      mapM parseJSON v
+
 
 someFunc :: IO ()
 someFunc =
-  print $ (Y.decode configYaml :: Maybe Config)
+  print $ (Y.decode configYaml :: Maybe PageInfo)
