@@ -20,7 +20,7 @@ configYaml :: ByteString
 configYaml = [r|
 faculties:
   - familyName: wang
-    lastName: newb
+    givenName: newb
     titles: [Principles, Investigator]
     descriptions:
       - |
@@ -33,7 +33,7 @@ faculties:
     photo: "www.baidu.com"
 
   - familyName: wang
-    lastName: newb
+    givenName: newb
     titles:
       - Principle
     descriptions:
@@ -48,7 +48,7 @@ faculties:
 
 staff:
   - familyName: wang
-    lastName: newb
+    givenName: newb
     titles:
       - Principle
     descriptions:
@@ -67,7 +67,7 @@ staff:
 data People =
   People {
     familyName :: Text
-  , lastName :: Text
+  , givenName :: Text
   , titles :: [Text]
   , url :: Maybe Text
   , descriptions :: [Text]
