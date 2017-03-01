@@ -1,5 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE QuasiQuotes       #-}
+{-# LANGUAGE DeriveGeneric #-}
 
 module Lib
     ( someFunc
@@ -12,6 +13,7 @@ import Text.RawString.QQ
 import Data.ByteString (ByteString)
 import Control.Applicative
 import Prelude -- Ensure Applicative is in scope and we have no warnings, before/after AMP.
+import GHC.Generics
 
 configYaml :: ByteString
 configYaml = [r|
@@ -50,13 +52,14 @@ data People =
   People {
     name :: Text
   , photo :: Text
-  } deriving (Eq, Show)
+  } deriving (Eq, Show, Generic)
 
-instance FromJSON People where
-  parseJSON (Y.Object v) =
-    People <$>
-    v .: "name" <*>
-    v .: "photo"
+instance FromJSON People
+-- instance FromJSON People where
+--   parseJSON (Y.Object v) =
+--     People <$>
+--     v .: "name" <*>
+--     v .: "photo"
 
 instance FromJSON Config where
   parseJSON (Y.Object v) =
