@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DeriveGeneric #-}
 
-module Lib where
+module Parser where
 
 import Data.Text (Text)
 import qualified Data.Yaml as Y
