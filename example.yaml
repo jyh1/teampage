@@ -1,0 +1,42 @@
+faculties:
+  - familyName: wang
+    givenName: newb
+    titles: [Principles, Investigator]
+    descriptions:
+      - |
+          haha
+          heheh
+          yes
+          new: sldkfj
+      - "Job Description: Daily Management"
+    email: "wang@newbie.com"
+    photo: "www.baidu.com"
+
+  - familyName: wang
+    givenName: newb
+    titles:
+      - Principle
+    descriptions:
+      - |
+          haha
+          heheh
+          yes
+          new: sldkfj
+      - "Job Description: Daily Management"
+    email: "wang@newbie.com"
+    photo: "www.baidu.com"
+
+staff:
+  - familyName: wang
+    givenName: newb
+    titles:
+      - Principle
+    descriptions:
+      - |
+          haha
+          heheh
+          yes
+          new: sldkfj
+      - "Job Description: Daily Management"
+    email: "wang@newbie.com"
+    photo: "www.baidu.com"

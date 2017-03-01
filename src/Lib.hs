@@ -1,67 +1,16 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE QuasiQuotes       #-}
 {-# LANGUAGE DeriveGeneric #-}
 
-module Lib
-    ( someFunc
-    ) where
+module Lib where
 
 import Data.Text (Text)
 import qualified Data.Yaml as Y
 import Data.Yaml (FromJSON(..), (.:))
-import Text.RawString.QQ
 import Data.ByteString (ByteString)
 import Control.Applicative
-import Prelude -- Ensure Applicative is in scope and we have no warnings, before/after AMP.
 import GHC.Generics
 import Data.HashMap.Strict
-
-configYaml :: ByteString
-configYaml = [r|
-faculties:
-  - familyName: wang
-    givenName: newb
-    titles: [Principles, Investigator]
-    descriptions:
-      - |
-          haha
-          heheh
-          yes
-          new: sldkfj
-      - "Job Description: Daily Management"
-    email: "wang@newbie.com"
-    photo: "www.baidu.com"
-
-  - familyName: wang
-    givenName: newb
-    titles:
-      - Principle
-    descriptions:
-      - |
-          haha
-          heheh
-          yes
-          new: sldkfj
-      - "Job Description: Daily Management"
-    email: "wang@newbie.com"
-    photo: "www.baidu.com"
-
-staff:
-  - familyName: wang
-    givenName: newb
-    titles:
-      - Principle
-    descriptions:
-      - |
-          haha
-          heheh
-          yes
-          new: sldkfj
-      - "Job Description: Daily Management"
-    email: "wang@newbie.com"
-    photo: "www.baidu.com"
-
-|]
+import qualified Data.ByteString.Lazy as B
 
 
 data People =
@@ -84,8 +33,3 @@ instance FromJSON PageInfo where
   parseJSON (Y.Object v) =
     PageInfo <$>
       mapM parseJSON v
-
-
-someFunc :: IO ()
-someFunc =
-  print $ (Y.decode configYaml :: Maybe PageInfo)
