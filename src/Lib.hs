@@ -36,7 +36,18 @@ packages:
 extra-deps:
 - wai-app-static-3.1.4.1
 test:
-  name: wang
+  familyName: wang
+  lastName: newb
+  titles:
+    - Principle
+  descriptions:
+    - |
+        haha
+        heheh
+        yes
+        new: sldkfj
+    - "Job Description: Daily Management"
+  email: "wang@newbie.com"
   photo: "www.baidu.com"
 |]
 
@@ -50,16 +61,17 @@ data Config =
 
 data People =
   People {
-    name :: Text
+    familyName :: Text
+  , lastName :: Text
+  , titles :: [Text]
+  , url :: Maybe Text
+  , descriptions :: [Text]
+  , email :: Text
   , photo :: Text
   } deriving (Eq, Show, Generic)
 
 instance FromJSON People
--- instance FromJSON People where
---   parseJSON (Y.Object v) =
---     People <$>
---     v .: "name" <*>
---     v .: "photo"
+
 
 instance FromJSON Config where
   parseJSON (Y.Object v) =
