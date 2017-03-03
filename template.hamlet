@@ -1,4 +1,12 @@
 $forall tag <- keys table
   <h3 .p1>
     <span .s1>
-      #{T.toUpper (T.replace "_" " " tag)}
+      #{categoryTag tag}
+  $forall people <- getPeopleList table tag
+    $with name <- getWholeName people
+      $maybe photoUrl <- photo people
+        <div style="width: 100%; float: left;">
+          <dl class="wp-cation alignleft">
+            <dt class="wp-caption-dt font-secondary">
+              <img .wp-image-11 src=#{photoUrl} alt=#{name} width="200" height="224">
+      $nothing
