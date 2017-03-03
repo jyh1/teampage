@@ -9,8 +9,9 @@ import Data.Yaml (FromJSON(..), (.:))
 import Data.ByteString (ByteString)
 import Control.Applicative
 import GHC.Generics
-import Data.HashMap.Strict
+import qualified Data.HashMap.Strict as H
 import qualified Data.ByteString.Lazy as B
+import Data.Maybe
 
 
 data People =
@@ -26,13 +27,20 @@ data People =
 
 instance FromJSON People
 
-data PageInfo = PageInfo (HashMap Text [People])
+data Category = Category Text [People]
   deriving (Eq, Show)
 
-instance FromJSON PageInfo where
+instance FromJSON Category where
   parseJSON (Y.Object v) =
-    PageInfo <$>
-      mapM parseJSON v
+    let k = head (H.keys v) in
+      Category k <$> parseJSON (fromJust $ H.lookup k v)
+
+data PageInfo = PageInfo [Category]
+  deriving (Eq, Show, Generic)
+
+
+instance FromJSON PageInfo
+
 
 -- for test
 example :: IO PageInfo

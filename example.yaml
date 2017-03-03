@@ -1,4 +1,4 @@
-faculties:
+- faculties:
   - familyName: qu
     givenName: kun
     titles: [Ph.D., Principle Investigator]
@@ -26,7 +26,7 @@ faculties:
     email: libin03@ustc.edu.cn
     photo: "http://localhost:8888/wp-content/uploads/2016/06/IMG_4537-840x1024.jpg"
 
-staff:
+- staff:
   - familyName: jin
     givenName: chen
     titles:
@@ -37,7 +37,7 @@ staff:
     email: "jinchen@ustc.edu.cn"
     photo: "http://localhost:8888/wp-content/uploads/2016/06/8957DE10-6BF1-4B80-B3ED-19D45E19233E-1.jpg"
 
-post-doctoral_fellows:
+- post-doctoral_fellows:
   - familyName: li
     givenName: young
     titles:
@@ -47,7 +47,7 @@ post-doctoral_fellows:
     email: "lyssg@mail.ustc.edu.cn"
     photo: "http://localhost:8888/wp-content/uploads/2016/09/李杨-copy-e1473671644367-817x1024.jpg"
 
-test:
+- VISITING_STUDENTS_/_INTERNS:
   - familyName: wu
     givenName: yajie
     descriptions:
