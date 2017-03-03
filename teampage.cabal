@@ -23,6 +23,8 @@ library
                      , bytestring
                      , raw-strings-qq
                      , unordered-containers
+                     , shakespeare
+                     , blaze-html
   default-language:    Haskell2010
 
 executable teampage-exe

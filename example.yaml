@@ -1,42 +1,48 @@
 faculties:
-  - familyName: wang
-    givenName: newb
-    titles: [Principles, Investigator]
+  - familyName: qu
+    givenName: kun
+    titles: [Ph.D., Principle Investigator]
+    email: qukun@ustc.edu.cn
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/s_func_mbox_getMessageDatasid_BAHNAruULkSPFEaXBsUUdrAaeVBvdtsSmid_1_1tbiAQYMA1QhmKXGuAAAmpart_3-843x1024.jpg"
     descriptions:
+      - Professor, School of Life Science, USTC, China
       - |
-          haha
-          heheh
-          yes
-          new: sldkfj
-      - "Job Description: Daily Management"
-    email: "wang@newbie.com"
-    photo: "www.baidu.com"
+        2014-2016: Director of Bioinformatics, School of Medicine, Stanford University, USA
+        2012-2014: Sr. Bioinformatics Scientist, School of Medicine, Stanford University, USA
+        2004-2010: Ph.D., Physical Chemistry, Indiana University, USA
+        1999-2004: B.S., Chemical Physics, USTC, China
+    url: "http://biox.ustc.edu.cn/szdw/zzbqnqrjh/201602/t20160221_236961.html"
 
-  - familyName: wang
-    givenName: newb
-    titles:
-      - Principle
+  - familyName: li
+    givenName: bin
+    titles: [Ph.D.]
     descriptions:
+      - Associate Research Professor, School of Life Science, USTC, China
       - |
-          haha
-          heheh
-          yes
-          new: sldkfj
-      - "Job Description: Daily Management"
-    email: "wang@newbie.com"
-    photo: "www.baidu.com"
+        2014-2016:Postdoctoral Scholar, Department of Chemistry, Columbia University, USA
+        2010-2014: Postdoctoral Scholar, Department of Chemistry, University of California, Berkeley, USA
+        2004-2010: Ph.D., Dalian Institute of Chemical Physics, Chinese Academy of Sciences, China
+        1999-2004: B.S., Chemical Physics, USTC, China
+    email: libin03@ustc.edu.cn
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/IMG_4537-840x1024.jpg"
 
 staff:
-  - familyName: wang
-    givenName: newb
+  - familyName: jin
+    givenName: chen
     titles:
-      - Principle
+      - Lab Manager
     descriptions:
-      - |
-          haha
-          heheh
-          yes
-          new: sldkfj
+      - M.Sc. Immunology, USTC, China
       - "Job Description: Daily Management"
-    email: "wang@newbie.com"
-    photo: "www.baidu.com"
+    email: "jinchen@ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/8957DE10-6BF1-4B80-B3ED-19D45E19233E-1.jpg"
+
+post-doctoral_fellows:
+  - familyName: li
+    givenName: young
+    titles:
+      - Ph.D.
+    descriptions:
+      - "Research Interests: Clinical Epigenomics"
+    email: "lyssg@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/09/李杨-copy-e1473671644367-817x1024.jpg"
