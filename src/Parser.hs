@@ -33,3 +33,10 @@ instance FromJSON PageInfo where
   parseJSON (Y.Object v) =
     PageInfo <$>
       mapM parseJSON v
+
+-- for test
+example :: IO PageInfo
+example = do
+  p <- Y.decodeFileEither "example.yaml"
+  case p of
+    Right i -> return i

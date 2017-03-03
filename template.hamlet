@@ -1,2 +1,4 @@
-<a>
-  hhhhh
+$forall tag <- keys table
+  <h3 .p1>
+    <span .s1>
+      #{T.toUpper (T.replace "_" " " tag)}
