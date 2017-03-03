@@ -19,9 +19,7 @@ $forall tag <- keys table
 
                 $forall info <- descriptions people
                   <li>
-                    $with infoLine <- T.lines info
-                      $forall r <- infoLine
-                        #{r}
+                    #{T.strip info}
                 <li>
                   <a href=#{getMailLink people}>
                     #{email people}
