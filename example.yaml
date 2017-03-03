@@ -47,6 +47,87 @@
     email: "lyssg@mail.ustc.edu.cn"
     photo: "http://localhost:8888/wp-content/uploads/2016/09/李杨-copy-e1473671644367-817x1024.jpg"
 
+  - familyName: guo
+    givenName: chuang
+    titles:
+      - Ph.D.
+    descriptions:
+      - "Research Interests: Clinical Epigenomics"
+    email: "gchuang@ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/09/guochuang.jpg"
+
+- graduate_students:
+
+  - familyName: fang
+    givenName: jingwen
+    titles:
+      - Ph.D. Candidate
+    descriptions:
+      - "B.S. Biology, USTC"
+      - "Research Interests: LncRNA functional prediction"
+    email: "fjingwen@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/903539511050763378-1.jpg"
+
+  - familyName: zuo
+    givenName: zuqi
+    titles:
+      - Ph.D. Candidate
+    descriptions:
+      - "B.S. Biology, USTC"
+      - "Research Interests: Epigenetic Regulation"
+    email: "zzq234@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/12/WechatIMG13.jpeg"
+
+  - familyName: zong
+    givenName: dandan
+    titles:
+      - Graduate Student
+    descriptions:
+      - "B.S. Biology, HFUT"
+      - "Research Interests: Epigenetic Regulation"
+    email: "dandanz@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/11/Zongdandan-e1479972500853.png"
+
+  - familyName: huang
+    givenName: beibei
+    titles:
+      - Graduate Student
+    descriptions:
+      - "B.S. Biology, Anhui Normal University"
+      - "Research Interests: Transcriptional Regulation"
+    email: "huangbb@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/469059423320841632-1.jpg"
+
+  - familyName: zhu
+    givenName: lianbang
+    titles:
+      - Graduate Student
+    descriptions:
+      - "B.S. Biology, Anhui Normal University"
+      - "Research Interests: Epigenomic Regulation"
+    email: "lianbang@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/wxid_bl640qrl2w5q21_1467267979412_24.jpg"
+
+  - familyName: li
+    givenName: kun
+    titles:
+      - Graduate Student
+    descriptions:
+      - "B.S. Biology, Xinyang Normal University"
+      - "Research Interests: Gene regulatory network prediction"
+    email: "lkun@mail.ustc.edu.cn"
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/11DD877F-83FE-44ED-8F2C-498D525833BA-1.jpg"
+
+  - familyName: liu
+    givenName: qian
+    titles:
+      - Graduate Student
+    descriptions:
+      - "B.S. Biology, China Pharmaceutical University"
+      - "Research Interests: RNA Structure"
+    email: "liuqiann@mail.ustc.edu.cn"
+    photo: http://localhost:8888/wp-content/uploads/2016/08/刘倩-e1470115155624.png
+
 - VISITING_STUDENTS_/_INTERNS:
   - familyName: wu
     givenName: yajie
