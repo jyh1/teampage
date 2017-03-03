@@ -34,7 +34,9 @@ getMailLink =
   T.append "mailto:" . email
 
 getPeopleList :: HashMap T.Text [People] -> T.Text -> [People]
-getPeopleList table tag = lookupDefault undefined tag table
+getPeopleList table tag = lookupDefault
+                            (error (T.unpack tag ++ " category is empty!"))
+                            tag table
 
 generatePage :: PageInfo -> String
 generatePage (PageInfo table) =
@@ -42,5 +44,4 @@ generatePage (PageInfo table) =
 
 test = do
   p <- example
-  return ()
   return (generatePage p)

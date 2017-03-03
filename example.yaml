@@ -3,8 +3,7 @@ faculties:
     givenName: kun
     titles: [Ph.D., Principle Investigator]
     email: qukun@ustc.edu.cn
-    # photo: "http://localhost:8888/wp-content/uploads/2016/06/s_func_mbox_getMessageDatasid_BAHNAruULkSPFEaXBsUUdrAaeVBvdtsSmid_1_1tbiAQYMA1QhmKXGuAAAmpart_3-843x1024.jpg"
-    photo: QukunPhoto
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/s_func_mbox_getMessageDatasid_BAHNAruULkSPFEaXBsUUdrAaeVBvdtsSmid_1_1tbiAQYMA1QhmKXGuAAAmpart_3-843x1024.jpg"
     descriptions:
       - Professor, School of Life Science, USTC, China
       - |
@@ -36,8 +35,7 @@ staff:
       - M.Sc. Immunology, USTC, China
       - "Job Description: Daily Management"
     email: "jinchen@ustc.edu.cn"
-    # photo: "http://localhost:8888/wp-content/uploads/2016/06/8957DE10-6BF1-4B80-B3ED-19D45E19233E-1.jpg"
-    photo: jinchenphoto
+    photo: "http://localhost:8888/wp-content/uploads/2016/06/8957DE10-6BF1-4B80-B3ED-19D45E19233E-1.jpg"
 
 post-doctoral_fellows:
   - familyName: li
@@ -47,5 +45,4 @@ post-doctoral_fellows:
     descriptions:
       - "Research Interests: Clinical Epigenomics"
     email: "lyssg@mail.ustc.edu.cn"
-    # photo: "http://localhost:8888/wp-content/uploads/2016/09/李杨-copy-e1473671644367-817x1024.jpg"
-    photo: liyangphoto
+    photo: "http://localhost:8888/wp-content/uploads/2016/09/李杨-copy-e1473671644367-817x1024.jpg"

@@ -10,18 +10,19 @@ $forall tag <- keys table
             <dt class="wp-caption-dt font-secondary">
               <img .wp-image-11 src=#{photoUrl} alt=#{name} width="200" height="224">
 
-            <ul>
-              <li>
-                <a title=#{name} href=#{getUrl people} >
-                  #{getNameLine people}
-
-              $forall info <- descriptions people
+          <dl class="wp-cation alignleft">
+            <div style="width:650px">
+              <ul>
                 <li>
-                  $with infoLine <- T.lines info
-                    $forall r <- infoLine
-                      <div>
+                  <a title=#{name} href=#{getUrl people} >
+                    #{getNameLine people}
+
+                $forall info <- descriptions people
+                  <li>
+                    $with infoLine <- T.lines info
+                      $forall r <- infoLine
                         #{r}
-              <li>
-                <a href=#{getMailLink people}>
-                  #{email people}
+                <li>
+                  <a href=#{getMailLink people}>
+                    #{email people}
       $nothing
