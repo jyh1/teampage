@@ -1,8 +1,8 @@
-$forall tag <- keys table
+$forall Category tag ps <- table
   <h3 .p1>
     <span .s1>
       #{categoryTag tag}
-  $forall people <- getPeopleList table tag
+  $forall people <- ps
     $with name <- getWholeName people
       $maybe photoUrl <- photo people
         <div style="width: 100%; float: left;">
@@ -25,4 +25,4 @@ $forall tag <- keys table
                     #{email people}
       $nothing
         <p style="padding-left: 10px;">
-          <a href=#{getMailLink people}> #{name} </a> #{getSimplifiedDescription people}
+          <a href=#{getMailLink people}> #{name} </a>#{getSimplifiedDescription people}

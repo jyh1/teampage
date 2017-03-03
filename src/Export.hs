@@ -43,11 +43,6 @@ getSimplifiedDescription p =
     , email p
     ]
 
-getPeopleList :: HashMap T.Text [People] -> T.Text -> [People]
-getPeopleList table tag = lookupDefault
-                            (error (T.unpack tag ++ " category is empty!"))
-                            tag table
-
 generatePage :: PageInfo -> String
 generatePage (PageInfo table) =
   renderHtml $(shamletFile "template.hamlet")
