@@ -9,4 +9,7 @@ $forall tag <- keys table
           <dl class="wp-cation alignleft">
             <dt class="wp-caption-dt font-secondary">
               <img .wp-image-11 src=#{photoUrl} alt=#{name} width="200" height="224">
+        <li>
+          <a title=#{name} href=#{getUrl people} >
+            #{getNameLine people}
       $nothing

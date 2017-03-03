@@ -6,6 +6,7 @@ import Text.Hamlet (shamletFile)
 import Text.Blaze.Html.Renderer.String (renderHtml)
 import Data.HashMap.Strict
 import qualified Data.Text as T
+import Data.Maybe
 
 import Parser
 
@@ -20,8 +21,13 @@ getGivenName p =
     T.append (T.toUpper h) r
 
 getWholeName p =
-  T.append (getGivenName p) (T.cons ' ' $ getFamilyName p) 
+  T.append (getGivenName p) (T.cons ' ' $ getFamilyName p)
 
+getUrl :: People -> T.Text
+getUrl = fromMaybe "void" . url
+
+getNameLine p =
+  T.intercalate ", " (getWholeName p : titles p)
 
 getPeopleList :: HashMap T.Text [People] -> T.Text -> [People]
 getPeopleList table tag = lookupDefault undefined tag table
@@ -32,4 +38,5 @@ generatePage (PageInfo table) =
 
 test = do
   p <- example
+  return ()
   return (generatePage p)
