@@ -33,6 +33,16 @@ getMailLink :: People -> T.Text
 getMailLink =
   T.append "mailto:" . email
 
+getSimplifiedDescription p =
+  T.concat
+    [
+      ", "
+    , T.intercalate ", " (descriptions p)
+    , ". "
+    , "Email: "
+    , email p
+    ]
+
 getPeopleList :: HashMap T.Text [People] -> T.Text -> [People]
 getPeopleList table tag = lookupDefault
                             (error (T.unpack tag ++ " category is empty!"))

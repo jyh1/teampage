@@ -24,3 +24,5 @@ $forall tag <- keys table
                   <a href=#{getMailLink people}>
                     #{email people}
       $nothing
+        <p style="padding-left: 10px;">
+          <a href=#{getMailLink people}> #{name} </a> #{getSimplifiedDescription people}

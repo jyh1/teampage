@@ -46,3 +46,10 @@ post-doctoral_fellows:
       - "Research Interests: Clinical Epigenomics"
     email: "lyssg@mail.ustc.edu.cn"
     photo: "http://localhost:8888/wp-content/uploads/2016/09/李杨-copy-e1473671644367-817x1024.jpg"
+
+test:
+  - familyName: wu
+    givenName: yajie
+    descriptions:
+      - University of Liverpool, UK
+    email: hlywu2@liv.ac.uk
