@@ -17,7 +17,7 @@ data People =
   People {
     familyName :: Text
   , givenName :: Text
-  , titles :: [Text]
+  , titles :: Maybe [Text]
   , url :: Maybe Text
   , descriptions :: [Text]
   , email :: Text

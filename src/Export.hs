@@ -27,7 +27,11 @@ getUrl :: People -> T.Text
 getUrl = fromMaybe "void" . url
 
 getNameLine p =
-  T.intercalate ", " (getWholeName p : titles p)
+  T.intercalate ", " (getWholeName p : fromMaybe [] (titles p))
+
+getMailLink :: People -> T.Text
+getMailLink =
+  T.append "mailto:" . email
 
 getPeopleList :: HashMap T.Text [People] -> T.Text -> [People]
 getPeopleList table tag = lookupDefault undefined tag table
@@ -38,4 +42,5 @@ generatePage (PageInfo table) =
 
 test = do
   p <- example
+  return ()
   return (generatePage p)
