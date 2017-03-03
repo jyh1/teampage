@@ -12,4 +12,14 @@ $forall tag <- keys table
         <li>
           <a title=#{name} href=#{getUrl people} >
             #{getNameLine people}
+
+        $forall info <- descriptions people
+          <li>
+            $with infoLine <- T.lines info
+              <div>
+                #{head infoLine}
+              $forall r <- tail infoLine
+                <div>
+                  #{r}
+
       $nothing

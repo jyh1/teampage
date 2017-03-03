@@ -38,5 +38,4 @@ generatePage (PageInfo table) =
 
 test = do
   p <- example
-  return ()
   return (generatePage p)
